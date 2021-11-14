@@ -14,6 +14,4 @@ export const detailApi = (movieId: string) => axiosInstance.get(`/movie/${movieI
 
 export const similarApi = (id: string) => axiosInstance.get(`/movie/${id}/similar`);
 
-export const reviewsApi = (id: string) => axiosInstance.get(`/movie/${id}/reviews`);
-
 export const searchApi = (query: string) => axiosInstance.get(`/search/movie?query=${query}`);

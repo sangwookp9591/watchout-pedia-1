@@ -7,6 +7,7 @@ import Card from '../../../components/Card';
 
 const Base = styled.div`
   margin-bottom: 42px;
+  position: relative;
 `;
 
 const Title = styled.h4`
@@ -18,6 +19,8 @@ const Title = styled.h4`
 
 const UpcomingMovieSection: React.FC = () => {
   const { data: upcomingMovieResponse, isLoading } = useUpcomingMovie();
+
+  const getYear = (release_date: string) => release_date.split('-')[0] || '';
 
   return (
     <Base>
@@ -35,7 +38,7 @@ const UpcomingMovieSection: React.FC = () => {
                   title={movie.title}
                   posterPath={`${process.env.REACT_APP_IMAGE_PREFIX}/${movie.poster_path}`}
                   voteAverage={movie.vote_average}
-                  year={2022}
+                  year={getYear(movie.release_date)}
                 />
               ))
             }

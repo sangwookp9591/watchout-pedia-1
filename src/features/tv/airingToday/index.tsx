@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 import useAiringTodayTv from './useAiringTodayTv';
 import Card from '../../../components/Card';
-import Slider from "../../../components/Slider";
+import Slider from '../../../components/Slider';
 
 const Base = styled.div`
   margin-bottom: 42px;
@@ -18,6 +18,8 @@ const Title = styled.h4`
 
 const AiringTodayTvSection: React.FC = () => {
   const { data: airingTodayTvResponse, isLoading } = useAiringTodayTv();
+
+  const getYear = (release_date: string) => release_date.split('-')[0] || '';
 
   return (
     <Base>
@@ -35,7 +37,7 @@ const AiringTodayTvSection: React.FC = () => {
                   title={tv.name}
                   posterPath={`${process.env.REACT_APP_IMAGE_PREFIX}/${tv.poster_path}`}
                   voteAverage={tv.vote_average}
-                  year={2022}
+                  year={getYear(tv.first_air_date)}
                 />
               ))
             }

@@ -1,10 +1,11 @@
 import { useQuery } from 'react-query';
+import { AxiosError, AxiosResponse } from 'axios';
+
 import { similarApi } from '../../apis/movieApi';
-import {AxiosError, AxiosResponse} from "axios";
-import {MovieDetail, Response} from "../../types";
+import { MovieDetail, ListResponse } from '../../types';
 
 const useSimilarMovie = (id: string) => {
-  const { isLoading, isError, data } = useQuery<AxiosResponse<Response<MovieDetail>>, AxiosError>(['movieSimilar', id], () => similarApi(id));
+  const { isLoading, isError, data } = useQuery<AxiosResponse<ListResponse<MovieDetail>>, AxiosError>(['movieSimilar', id], () => similarApi(id));
 
   return {
     isLoading,

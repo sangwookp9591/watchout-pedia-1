@@ -96,9 +96,7 @@ const Footer: React.FC = () => {
                <TermsAndPolicyItem>회사 안내</TermsAndPolicyItem>
              </TermsAndPolicy>
            </Left>
-           <Right>
-
-           </Right>
+           <Right />
          </ContentWrapper>
        </Container>
      </Section>

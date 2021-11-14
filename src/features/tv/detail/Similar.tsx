@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
+
 import useTvSimilar from '../useTvSimilar';
 
 const Base = styled.section`

@@ -134,7 +134,7 @@ interface Dates {
   minimum: string;
 }
 
-export interface Response<T> {
+export interface ListResponse<T> {
   dates: Dates;
   page: number;
   results: T[];

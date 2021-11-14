@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from "@emotion/styled";
-import useSimilarMovie from "../useMovieSimilar";
+import styled from '@emotion/styled';
+import useSimilarMovie from '../useMovieSimilar';
 
 const Base = styled.section`
   padding: 11px 15px;

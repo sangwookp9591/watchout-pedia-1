@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 import { CSSTransition } from 'react-transition-group';
 
-import Portal from "./Portal";
+import Portal from './Portal';
 
 interface Props {
   isOpen: boolean;

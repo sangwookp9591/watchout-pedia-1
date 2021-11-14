@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import UpcomingMovieSection from '../features/movie/upcoming';
 import LatestMovieSection from '../features/movie/latest';
 import NowPlayingSection from '../features/movie/nowPlaying';
-import PopularMovieSection from "../features/movie/popular";
+import PopularMovieSection from '../features/movie/popular';
 import TopRateMovieSection from '../features/movie/topRate';
 
 const Main = styled.main`

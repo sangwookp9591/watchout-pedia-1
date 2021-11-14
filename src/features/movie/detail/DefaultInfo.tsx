@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 const ContentSection = styled.section`
   padding: 11px 15px;

@@ -224,6 +224,9 @@ const MovieDetail: React.FC<Props> = () => {
         isLoading || !data ? (<div>Loading...</div>) : (
           <>
             <TopInfo>
+
+              {/* 포스터 영역 */}
+
               <PosterContainer>
                 <Backdrop>
                   <LeftBlur />
@@ -234,12 +237,18 @@ const MovieDetail: React.FC<Props> = () => {
                   <RightBlur />
                 </Backdrop>
               </PosterContainer>
+
+              {/* 메인 */}
+
               <Main>
                 <Container>
                   <PosterWrapper>
                     <Poster src={`${process.env.REACT_APP_IMAGE_PREFIX}/${data.poster_path}`} />
                   </PosterWrapper>
                   <ContentWrapper>
+
+                    {/* 기본정보 */}
+
                     <Title>{data.title}</Title>
                     <Keyword>{year} ・ {genres}</Keyword>
                     <AverageRate>평균 ★{data.vote_average} ({data.vote_count}명)</AverageRate>
@@ -251,6 +260,9 @@ const MovieDetail: React.FC<Props> = () => {
                         </RatingWrapper>
                       </StarRate>
                       <Divider />
+
+                      {/* 액션 버튼 */}
+
                       <ActionButtonContainer>
                         <ActionButton>
                           <AiOutlinePlus />보고싶어요
@@ -270,6 +282,10 @@ const MovieDetail: React.FC<Props> = () => {
                 </Container>
               </Main>
             </TopInfo>
+
+            {/* 상세 정보 */}
+
+
             <BottomInfo>
               <ContentSectionContainer>
                 <DefaultInfo title={data.title} year={year} genres={genres} runtime={data.runtime} overview={data.overview} />

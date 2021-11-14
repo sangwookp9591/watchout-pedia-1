@@ -19,6 +19,8 @@ const Title = styled.h4`
 const LatestTvSection: React.FC = () => {
   const { data: latestTvResponse, isLoading } = useLatestTv();
 
+  const getYear = (release_date: string) => release_date.split('-')[0] || '';
+
   return (
     <Base>
       <Title>최근 개봉작</Title>
@@ -33,7 +35,7 @@ const LatestTvSection: React.FC = () => {
               title={latestTvResponse.data.name}
               posterPath={`${process.env.REACT_APP_IMAGE_PREFIX}/${latestTvResponse.data.poster_path}`}
               voteAverage={latestTvResponse.data.vote_average}
-              year={2022}
+              year={getYear(latestTvResponse.data.first_air_date)}
             />
           )
         )

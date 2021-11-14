@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import {AxiosError, AxiosResponse} from "axios";
+import { AxiosError, AxiosResponse } from 'axios';
 
 import { detailApi } from '../../apis/movieApi';
 import { MovieDetail } from '../../types';

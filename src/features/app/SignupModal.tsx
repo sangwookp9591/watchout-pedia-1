@@ -1,10 +1,9 @@
 import React from 'react';
-import styled from "@emotion/styled";
-import Modal from "../../components/Modal";
-import FacebookLogin, {ReactFacebookFailureResponse, ReactFacebookLoginInfo} from "react-facebook-login";
-import {FACEBOOK_APP_ID} from "../../constant";
-import {useRecoilState} from "recoil";
-import {loginModalOpenState, signupModalOpenState} from "./atom";
+import styled from '@emotion/styled';
+import Modal from '../../components/Modal';
+import FacebookLogin, {ReactFacebookFailureResponse, ReactFacebookLoginInfo} from 'react-facebook-login';
+import { useRecoilState } from 'recoil';
+import { loginModalOpenState, signupModalOpenState } from './atom';
 
 const Container = styled.div`
   width: 375px;
@@ -202,7 +201,7 @@ const SignupModal: React.FC<Props> = () => {
               <FacebookLogin
                 cssClass="my-facebook-button-class"
                 autoLoad
-                appId={FACEBOOK_APP_ID}
+                appId={''}
                 fields="name,email,picture"
                 callback={responseFacebook}
                 icon="fa-facebook"

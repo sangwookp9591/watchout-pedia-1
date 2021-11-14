@@ -19,6 +19,8 @@ const Title = styled.h4`
 const UpcomingMovieSection: React.FC = () => {
   const { data: nowPlayingMovieResponse, isLoading } = useNowPlayingMovie();
 
+  const getYear = (release_date: string) => release_date.split('-')[0] || '';
+
   return (
     <Base>
       <Title>현재 상영중</Title>
@@ -35,7 +37,7 @@ const UpcomingMovieSection: React.FC = () => {
                   title={movie.title}
                   posterPath={`${process.env.REACT_APP_IMAGE_PREFIX}/${movie.poster_path}`}
                   voteAverage={movie.vote_average}
-                  year={2022}
+                  year={getYear(movie.release_date)}
                 />
               ))
             }

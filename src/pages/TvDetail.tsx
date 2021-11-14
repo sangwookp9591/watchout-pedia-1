@@ -1,9 +1,9 @@
-import React, {useMemo} from 'react';
+import React, { useMemo } from 'react';
 import { Rating } from '@mui/material';
 import { useParams } from 'react-router-dom';
-import {AiFillEye, AiOutlinePlus} from 'react-icons/ai';
-import {FaPen} from 'react-icons/fa';
-import {FiMoreHorizontal} from 'react-icons/fi';
+import { AiFillEye, AiOutlinePlus } from 'react-icons/ai';
+import { FaPen } from 'react-icons/fa';
+import { FiMoreHorizontal } from 'react-icons/fi';
 import styled from '@emotion/styled';
 
 import Header from '../components/Header';

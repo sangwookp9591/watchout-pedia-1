@@ -1,12 +1,12 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { AiFillStar } from 'react-icons/ai';
 
 interface Props {
   linkUrl: string;
   title: string;
-  year: number;
+  year: string;
   posterPath: string;
   voteAverage: number;
 }
@@ -14,7 +14,7 @@ interface Props {
 const StyledLink = styled(Link)`
   text-decoration: none;
   display: block;
-  max-width: 200px;
+  margin-inline: 10px;
 `;
 
 const Base = styled.div`
@@ -39,7 +39,6 @@ const Image = styled.img`
 const Info = styled.div`
   text-align: left;
   width: 100%;
-  margin: 5px 10px 0 0;
 `;
 
 const Title = styled.h4`
